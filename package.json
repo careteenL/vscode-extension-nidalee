@@ -1,6 +1,6 @@
 {
-  "name": "extension-study",
-	"displayName": "extension-study",
+  "name": "ext-insert_log",
+	"displayName": "ext-insert_log",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -10,24 +10,33 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:extension-study.helloWorld"
+		"onCommand:ext-insert_log.insertLog"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension-study.helloWorld",
-				"title": "Hello World"
+				"command": "ext-insert_log.insertLog",
+				"title": "Insert Log Statement"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "extension-study.helloWorld",
-				"key": "ctrl+t",
-				"mac": "cmd+shift+t",
+				"command": "ext-insert_log.insertLog",
+				"key": "ctrl+l",
+				"mac": "cmd+shift+l",
 				"when": "editorTextFocus"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorTextFocus",
+					"command": "ext-insert_log.insertLog",
+					"group": "navigation"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
