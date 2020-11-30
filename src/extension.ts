@@ -3,6 +3,7 @@
  * @usage 1. obj.i 插入到下一行
  * 			  2. obj.r 替换当前选中字符
  * 			  3. obj.t 打印代码耗时
+ *        TODO: error/warning/table/color
  */
 import * as vscode from 'vscode';
 
