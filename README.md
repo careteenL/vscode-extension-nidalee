@@ -15,6 +15,11 @@
 
 ✨ 删除当前页面所有`console`
 
+- 在当前页面点击右键选择`Delete All Logs`
+  ```js
+  const logRegexp = /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
+  ```
+
 ## Release Notes
 
 ### 0.2.0

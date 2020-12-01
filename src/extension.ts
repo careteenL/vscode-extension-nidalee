@@ -45,6 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	};
 
+	// insertLog
 	let disposable = vscode.commands.registerCommand('Nidalee.insertLog', () => {
 		const editor = vscode.window.activeTextEditor;
 		const selection = editor?.selection;
@@ -61,6 +62,42 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	// 获取所有的`console`
+	const getAllLogs = ()  => {
+		const editor = vscode.window.activeTextEditor;
+		const document = editor?.document;
+		const documentText = document?.getText();
+		let logStatements = [];
+		const logRegexp = /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
+		let matched;
+		while (matched = logRegexp.exec(documentText!)) {
+			const matchedRange = new vscode.Range(document?.positionAt(matched.index)!, document?.positionAt(matched.index + matched[0].length)!);
+			if (!matchedRange.isEmpty) {
+				logStatements.push(matchedRange);
+			}
+		}
+		return logStatements;
+	};
+
+	// deleteLogs
+	let disposableDeleteLogs = vscode.commands.registerCommand('Nidalee.deleteLogs', () => {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return;
+		}
+		const workspaceEdit = new vscode.WorkspaceEdit();
+		const document = editor.document;
+		const allLogs = getAllLogs();
+		allLogs.forEach(log => {
+			workspaceEdit.delete(document.uri, log);
+		});
+		vscode.workspace.applyEdit(workspaceEdit).then(() => {
+			vscode.window.showInformationMessage(`${allLogs.length} consoles is deleted`);
+		});
+	});
+	
+	context.subscriptions.push(disposableDeleteLogs);
 }
 
 export function deactivate() {
