@@ -3,7 +3,7 @@
 	"displayName": "@careteen/Nidalee",
 	"description": "Insert/Delete JS Log",
 	"publisher": "careteen",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
