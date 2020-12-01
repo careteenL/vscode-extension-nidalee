@@ -1,6 +1,6 @@
 {
   "name": "ext-insert_log",
-	"displayName": "ext-insert_log",
+	"displayName": "@careteen/insertLog",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
