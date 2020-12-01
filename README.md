@@ -20,7 +20,11 @@
   const logRegexp = /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
   ```
 
-## Release Notes
+## ChangeLog
+
+### 0.3.0
+
+- ✨  删除当前页面所有`console`
 
 ### 0.2.0
 
