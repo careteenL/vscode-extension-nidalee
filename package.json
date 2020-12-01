@@ -1,9 +1,9 @@
 {
-  "name": "insertjslog",
+	"name": "insertjslog",
 	"displayName": "@careteen/insertJsLog",
 	"description": "insert log",
 	"publisher": "careteen",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
