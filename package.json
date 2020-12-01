@@ -1,7 +1,7 @@
 {
   "name": "ext-insert_log",
 	"displayName": "@careteen/insertLog",
-	"description": "",
+	"description": "insert log",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.51.0"
