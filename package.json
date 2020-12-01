@@ -1,7 +1,8 @@
 {
-  "name": "ext-insert_log",
-	"displayName": "@careteen/insertLog",
+  "name": "insertjslog",
+	"displayName": "@careteen/insertJsLog",
 	"description": "insert log",
+	"publisher": "careteen",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.51.0"
@@ -9,6 +10,10 @@
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/careteenL/vscode-plugin-insert-log.git"
+	},
 	"activationEvents": [
 		"onCommand:ext-insert_log.insertLog"
 	],
