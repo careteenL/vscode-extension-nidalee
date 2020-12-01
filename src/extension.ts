@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
 		} else if (/\.t$/.test(text!)) {
 			wrapTime(text!.slice(0, -2));
 		} else {
-			insertLog(text!.slice(0, -2));
+			insertLog(text!);
 		}
 	});
 
