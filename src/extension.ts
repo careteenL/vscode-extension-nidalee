@@ -9,7 +9,7 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
-	console.log('Congratulations, your extension "ext-insert_log" is now active!');
+	console.log('Congratulations, your extension "Nidalee" is now active!');
 
 	// 插入到下一行
 	const insertLog = (text: string) => {
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	};
 
-	let disposable = vscode.commands.registerCommand('ext-insert_log.insertLog', () => {
+	let disposable = vscode.commands.registerCommand('Nidalee.insertLog', () => {
 		const editor = vscode.window.activeTextEditor;
 		const selection = editor?.selection;
 		const text = editor?.document.getText(selection).trim();
@@ -64,5 +64,5 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-	console.log('your extension "ext-insert_log" is deactivate!');
+	console.log('your extension "Nidalee" is deactivate!');
 }

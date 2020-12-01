@@ -1,7 +1,7 @@
 {
-	"name": "insertjslog",
-	"displayName": "@careteen/insertJsLog",
-	"description": "insert log",
+	"name": "nidalee",
+	"displayName": "@careteen/Nidalee",
+	"description": "Insert/Delete JS Log",
 	"publisher": "careteen",
 	"version": "0.2.0",
 	"engines": {
@@ -12,22 +12,27 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/careteenL/vscode-plugin-insert-log.git"
+		"url": "https://github.com/careteenL/vscode-plugin-nidalee.git"
 	},
 	"activationEvents": [
-		"onCommand:ext-insert_log.insertLog"
+		"onCommand:Nidalee.insertLog",
+		"onCommand:Nidalee.deleteLogs"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "ext-insert_log.insertLog",
+				"command": "Nidalee.insertLog",
 				"title": "Insert Log Statement"
+			},
+			{
+				"command": "Nidalee.deleteLogs",
+				"title": "Delete All Logs"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "ext-insert_log.insertLog",
+				"command": "Nidalee.insertLog",
 				"key": "ctrl+l",
 				"mac": "cmd+shift+l",
 				"when": "editorTextFocus"
@@ -37,7 +42,12 @@
 			"editor/context": [
 				{
 					"when": "editorTextFocus",
-					"command": "ext-insert_log.insertLog",
+					"command": "Nidalee.insertLog",
+					"group": "navigation"
+				},
+				{
+					"when": "editorTextFocus",
+					"command": "Nidalee.deleteLogs",
 					"group": "navigation"
 				}
 			]
