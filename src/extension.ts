@@ -108,6 +108,7 @@ export function activate(context: vscode.ExtensionContext) {
 		editor.edit((editBuilder: vscode.TextEditorEdit) => {
 			let text = editor.document.getText();
 			// 前往`https://jex.im/regulex`可查看正则分析
+			// FIXME: #1
 			text = text.replace(/((\/\*([\w\W]+?)\*\/)|(\/\/(.(?!"\)))+)|(^\s*(?=\r?$)\n))/gm, '');
 			// text = text.replace(/((\/\*([\w\W]+?)\*\/)|(\/\/(.(?!"\)))+)|(\/\/((?![img]?\..*))+)|(^\s*(?=\r?$)\n))/gm, '');
 			text = text.replace(/(^\s*(?=\r?$)\n)/gm, '');
