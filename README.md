@@ -10,7 +10,7 @@
 
 ## Release Notes
 
-### 0.0.1
+### 0.2.0
 
 - 支持`console.log();`
 - 支持`console.time();**console.timeEnd();`
