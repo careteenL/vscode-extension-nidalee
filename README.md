@@ -4,6 +4,12 @@
 > - `console`打印日志方便前端定位问题，但前端小学生编程时滥用`console debug`大法。
 > - 滥用就是隐藏的陷阱。
 
+## Usage
+
+在`vscode`中打开`Extensions`搜索[@careteen/Nidalee](https://marketplace.visualstudio.com/items?itemName=careteen.nidalee)。
+
+![vscode-plugin-nidalee-usage](./src/assets/vscode-plugin-nidalee-usage.gif)
+
 ## Features
 
 ✨ 为所选择代码段添加`console`
