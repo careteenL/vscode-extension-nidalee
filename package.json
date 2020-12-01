@@ -1,7 +1,7 @@
 {
 	"name": "nidalee",
 	"displayName": "@careteen/Nidalee",
-	"description": "Insert/Delete JS Log",
+	"description": "Insert/Delete JS Log, Delete JS Comments",
 	"publisher": "careteen",
 	"version": "0.3.0",
 	"engines": {
@@ -28,6 +28,10 @@
 			{
 				"command": "Nidalee.deleteLogs",
 				"title": "Delete All Logs"
+			},
+			{
+				"command": "Nidalee.deleteComments",
+				"title": "Delete All Comments"
 			}
 		],
 		"keybindings": [
@@ -48,6 +52,11 @@
 				{
 					"when": "editorTextFocus",
 					"command": "Nidalee.deleteLogs",
+					"group": "navigation"
+				},
+				{
+					"when": "editorTextFocus",
+					"command": "Nidalee.deleteComments",
 					"group": "navigation"
 				}
 			]

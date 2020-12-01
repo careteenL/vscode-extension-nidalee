@@ -20,7 +20,16 @@
   const logRegexp = /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
   ```
 
+✨ 删除当前页面所有`注释`
+
+- 在当前页面点击右键选择`Delete All Comments`
+
+
 ## ChangeLog
+
+### 0.4.0
+
+- ✨  删除当前页面所有`注释`
 
 ### 0.3.0
 
