@@ -12,11 +12,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/careteenL/vscode-plugin-nidalee.git"
+		"url": "https://github.com/careteenL/vscode-extension-nidalee.git"
 	},
 	"activationEvents": [
 		"onCommand:Nidalee.insertLog",
-		"onCommand:Nidalee.deleteLogs"
+		"onCommand:Nidalee.deleteLogs",
+		"onCommand:Nidalee.deleteComments"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {

@@ -1,4 +1,4 @@
-# Nidalee（vscode plugin）
+# Nidalee（vscode extension）
 
 > - Nidalee(LOL狂野女猎手)，她人类形态的W技能（丛林伏击）使得陷阱呈隐形状态。
 > - `console`打印日志方便前端定位问题，但前端小学生编程时滥用`console debug`大法。
